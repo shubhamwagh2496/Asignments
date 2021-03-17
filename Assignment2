@@ -1,0 +1,17 @@
+            
+str=input("Enter the string")    
+player1='kevin'
+player2='stuad'
+
+strl=len(str)
+for i in range(0,strl):
+    newstr=str[i:strl]
+    for j in range(0,len(newstr)):
+        if newstr[j] in "aeiou":
+            print("player 1 will play")
+            print(newstr[:j+1])
+        else:
+            print("player 2 will play")
+            print(newstr[:j+1])
+            
+    
