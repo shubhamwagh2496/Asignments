@@ -1,0 +1,35 @@
+import pickle
+#employee={}
+
+def addEmployee(empobj):
+    f=open("Employee.dat","ab")
+    pickle.dump(empobj,f)
+    f.close()
+    
+    
+def searchEmployee():
+    f=open("Employee.dat","rb")
+    employee=pickle.load(f)
+    if(employee["Salary"]>3000):
+        print(employee)
+#
+# searchEmployee(1)
+print("press 1 to add Employee,press 2 to search employee with salary more than 3000")
+i=int(input())
+
+if(i==1):
+    ch='y'
+    while ch=='y':
+        employee={}
+        employee["Empcode"]=int(input("Enter employee code"))
+        employee["Name"]=input("Enter name")
+        employee["Salary"]=int(input("Enter salary"))
+    
+        addEmployee(employee)
+        print("Do you want to continue y/n")
+        ch=input()
+if(i==2):
+    searchEmployee()    
+   
+    
+    
