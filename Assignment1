@@ -1,0 +1,17 @@
+
+str=input("Enter the string")
+strlen=len(str)
+
+
+array=[]
+
+for char,count in sorted((str.count(i),i )for i in set(str)): #returns sorted count and character
+    array.extend(char*count)
+
+
+result=[None]*strlen
+
+result[::2]=array[int(strlen/2):]
+result[1::2]=array[:int(strlen/2)] #1 to start from odd index
+
+print(result)
