@@ -1,0 +1,26 @@
+# f=open("Story.txt","w")
+# f.write("Updated information As simplified by official websites.")
+# f.close()
+
+
+def AMcount():
+    try:
+        f=open("Story.txt","r")
+    except Exception:
+        print("Error related to file")
+    else:
+        s=f.read()
+        Acount=0
+        Mcount=0
+        for char in s:
+            if(char=='a' or char=='A'):
+                Acount=Acount+1;
+            if(char=='m' or char=='M'):
+                Mcount=Mcount+1
+   
+        print("The count of A is",Acount)
+        print("The count of M is",Mcount)
+
+    finally:
+        f.close()
+AMcount()
