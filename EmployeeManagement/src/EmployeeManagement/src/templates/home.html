@@ -1,0 +1,31 @@
+<html>
+<head><title>Title</title></head>
+<body>
+
+EmployeeLogin<br>
+<form action="http://127.0.0.1:5000/employeelogin" method='post'>
+<input type='text' name='empid'>
+<input type='text' name='emppass'>
+<input type='submit'>
+</form>
+{{emplogininvalid}}
+<br>
+AdminLogin<br>
+<form action="http://127.0.0.1:5000/adminlogin" method='post'>
+<input type='text' name='adminid'>
+<input type='text' name='adminpass'>
+<input type='submit'>
+</form>
+
+{{adminlogininvalid}}
+
+<br>
+Register Employee<br>
+  <form method="POST" action="http://127.0.0.1:5000/addemployee">
+      <input type="text" name="empid">
+      <input type="text" name="empname">
+       <input type="text" name="empsal">
+      <input type="submit" value="Add">
+    </form>
+</body>
+</html>
