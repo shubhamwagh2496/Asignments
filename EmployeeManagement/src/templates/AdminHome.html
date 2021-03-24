@@ -1,0 +1,44 @@
+<html>
+  <body>
+    <h1>Add Employee</h1>
+    <form method="POST" action="http://127.0.0.1:5000/addemployee">
+      <input type="text" name="empid">
+      <input type="text" name="empname">
+       <input type="text" name="empsal">
+      <input type="submit" value="Add">
+    </form>
+    
+    </table>
+     <h1>Update Employee</h1>
+    <form method="POST" action="http://127.0.0.1:5000/updateemployee">
+      <input type="text" name="empid">
+      <input type="text" name="empname">
+       <input type="text" name="empsal">
+      <input type="submit" value="Update">
+    </form>
+    {{updatemsg}}
+    
+    
+     <h1>Delete Employee</h1>
+    <form method="POST" action="http://127.0.0.1:5000/deleteemployee">
+      <input type="text" name="empid">
+      <input type="submit" value="Delete">
+    </form>
+    {{deletemsg}}
+    
+     <h1>Display All Employee</h1>
+    <form method="POST" action="http://127.0.0.1:5000/displayemployee">
+    <input type="submit" value="Diplay">
+    </form>
+    
+    <h1>Search Employee</h1>
+    <form method='post' action="http://127.0.0.1:5000/searchemployee">
+    <input type='text' name='empid'>
+    <input type='submit'>
+    </form>
+    {{searchmsg}}
+    {% for e in emp1 %}
+    {{e.empid}}
+    {% endfor %}
+  </body>
+</html>

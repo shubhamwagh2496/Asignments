@@ -1,0 +1,25 @@
+
+<html>
+<head><title>Title</title></head>
+<body>
+
+
+<table border='1'>
+{% for employee in emp %}
+<tr>
+<td>
+{{employee.empid}}
+</td>
+<td>
+{{employee.empname}}
+</td>
+<td>
+{{employee.empsal}}
+</td>
+</tr>
+
+{% endfor %}
+</table>
+
+</body>
+</html>
